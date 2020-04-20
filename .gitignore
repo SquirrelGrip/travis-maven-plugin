@@ -1,0 +1,6 @@
+.DS_Store
+target/
+*.iml
+.idea/
+pom.xml.versionsBackup
+all.gpg
