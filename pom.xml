@@ -235,16 +235,6 @@
                     <jdkVersion>8</jdkVersion>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.github.squirrelgrip</groupId>
-                <artifactId>travis-maven-plugin</artifactId>
-                <version>1.0.0</version>
-                <configuration>
-                    <token>${env.TRAVIS_TOKEN}</token>
-                    <slug>${project.artifactId}</slug>
-                    <user>SquirrelGrip</user>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
