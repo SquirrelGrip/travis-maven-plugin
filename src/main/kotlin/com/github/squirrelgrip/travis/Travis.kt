@@ -1,12 +1,11 @@
 package com.github.squirrelgrip.travis
 
-import com.github.squirrelgrip.extensions.json.toJson
+import com.github.squirrelgrip.extension.json.toJson
 import com.github.squirrelgrip.travis.model.Body
 import com.github.squirrelgrip.travis.model.EnvConfig
 import com.github.squirrelgrip.travis.model.Request
 import com.github.squirrelgrip.travis.model.RequestConfig
 import org.apache.http.HttpEntity
-import org.apache.http.HttpResponse
 import org.apache.http.client.ResponseHandler
 import org.apache.http.client.methods.HttpPost
 import org.apache.http.entity.StringEntity
@@ -69,7 +68,7 @@ class Travis : AbstractMojo() {
         val responseHandler: ResponseHandler<String> = ResponseHandler<String> { response ->
             val status: Int = response.statusLine.statusCode
             if (status in 200..299) {
-                val entity: HttpEntity = response.getEntity()
+                val entity: HttpEntity = response.entity
                 if (entity != null) EntityUtils.toString(entity) else ""
             } else {
                 throw MojoExecutionException("Unexpected response status: $status")

@@ -4,3 +4,5 @@ target/
 .idea/
 pom.xml.versionsBackup
 all.gpg
+/.mvn/wrapper/maven-wrapper.jar
+/.mvn/wrapper/MavenWrapperDownloader.java
